@@ -5,6 +5,7 @@ import random
 # Menu display function
 def display_menu():
     print('\n1 - Generate a random number')
+    print('2 - Random answer (yes/no/maybe)')
     print('0 - Exit')
 
 # Range acquisition function
@@ -43,6 +44,36 @@ def generate_number(min_val, max_val):
         elif choice == '0':
             sys.exit()
 
+# Receive question function
+def get_question():
+    while True:
+        user_question = input('Ask a question: ')
+        generate_answer(user_question)
+        return
+
+# Random answer generation function
+def generate_answer(question):
+    answer_list = ['Yes', 'No', 'Maybe']
+    while True:
+        answer = random.choice(answer_list)
+        
+        print('\nResult:')
+        print(f'Question: {question}')
+        print(f'Answer: {answer}')
+        print('1 - Repeat question')
+        print('2 - Menu')
+        print('0 - Exit')
+
+        choice = input('\nSelect: ')
+        if choice == '1':
+            continue
+        elif choice == '2':
+            return
+        elif choice == '0':
+            sys.exit()
+        else:
+            print('Incorrect choice.')
+
 # Main function
 def main():
     while True:
@@ -51,6 +82,8 @@ def main():
         choice = input('\nSelect: ')
         if choice == '1':
             get_range()
+        elif choice == '2':
+            get_question()
         elif choice == '0':
             sys.exit()
         else:
