@@ -11,8 +11,6 @@ python main.py
 # To-Do List
 Password generator
 
-Random answer (yes/no/maybe)
-
 Random choice from custom lists
 
 And much more!
