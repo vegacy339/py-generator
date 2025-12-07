@@ -77,7 +77,7 @@ def generate_answer(question):
 # Main function
 def main():
     while True:
-        print('=== Random Number Generator ===')
+        print('=== Random Generator ===')
         display_menu()
         choice = input('\nSelect: ')
         if choice == '1':
